@@ -53,13 +53,13 @@
         },
         initialize: function(){
             var o = this;
-            o.$title = o.$el.find('input.title')
+            o.$title = o.$el.find('input.title');
             o.$list = o.$el.find('ul.taskList');
             o.$error = o.$el.find('.error');
             o.collection.on('add', function(task){
                 var taskView = new TaskView({model: task});
-                o.$list.prepend(taskView.render().el)
-            })
+                o.$list.prepend(taskView.render().el);
+            });
             o.collection.fetch();
             o.collection.on("invalid", function(task, error) { // (3)
                 o.$error.text(error);
@@ -73,7 +73,7 @@
                 {validate: true}
             );
             if(sts){
-                o.$title.val('')
+                o.$title.val('');
                 o.$error.text('');
             }
         },
