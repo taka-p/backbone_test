@@ -1,0 +1,24 @@
+.taskApp input.title{
+    padding:8px;
+    border-radius: 4px;
+    width:20em;
+    border: solid 1px #ccc;
+}
+.taskApp ul.taskList{
+    padding-left: 0;
+}
+.taskApp ul.taskList li{
+    list-style:none;
+}
+.taskApp li.closed .title{
+    color: gray;
+    text-decoration: line-through;
+}
+.taskApp .del{
+    color: #ff5577;
+    text-decoration: none;
+    font-weight: bold;
+}
+.taskApp .error{
+    color: red;
+}

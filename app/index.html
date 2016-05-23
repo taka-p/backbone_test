@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Backbone - ToDo App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/underscore/underscore-min.js"></script>
+    <script src="../bower_components/backbone/backbone-min.js"></script>
+    <script src="../bower_components/backbone.localStorage/backbone.localStorage-min.js"></script>
+</head>
+<body>
+    <div class="taskApp">
+        <h1>TODO</h1>
+        <form class="addTask">
+            <input type="text" class="title" placeholder="タスクを入力してください">
+            <span class="error"></span>
+        </form>
+        <ul class="taskList"></ul>
+        <button class="clear">全て削除</button>
+    </div>
+    <script type="text/template" id="temp-taskItem">
+        <input type="checkbox" class="toggle" <%= closed ? 'checked' : '' %> >
+        <span class="title"><%-title%></span>
+        <a class="del" href="#">x</a>
+    </script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

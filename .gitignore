@@ -1,0 +1,6 @@
+# IDE
+.idea/
+*.iml
+
+# node_modules
+node_modules/
